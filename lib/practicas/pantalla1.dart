@@ -20,7 +20,7 @@ class _pantalla1State extends State<pantalla1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Practica 2')),
+      appBar: AppBar(title: const Text('Practica 1')),
       drawer: const AppDrawer(), // ← Aquí integramos el menú
       body: Column(
         children: [

@@ -59,7 +59,7 @@ class _pantalla4State extends State<pantalla4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Juego: Piedra, Papel o Tijera')),
+      appBar: AppBar(title: const Text('Practica 4')),
       drawer: const AppDrawer(),
       body: Center(
         child: SingleChildScrollView(

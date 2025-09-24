@@ -20,7 +20,7 @@ class _pantalla2State extends State<pantalla2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Practica 3')),
+      appBar: AppBar(title: const Text('Practica 2')),
       drawer: const AppDrawer(),
       body: ListView.builder(
         itemCount: items.length,

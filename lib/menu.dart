@@ -23,7 +23,7 @@ class AppDrawer extends StatelessWidget {
             title: const Text('Inicio'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.pushReplacementNamed(context, '/'); // 👈 usa la ruta raíz
+              Navigator.pushReplacementNamed(context, '/');
             },
           ),
           ListTile(

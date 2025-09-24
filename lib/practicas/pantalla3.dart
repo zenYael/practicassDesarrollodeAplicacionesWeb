@@ -72,7 +72,7 @@ class _pantalla3State extends State<pantalla3> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Registro'),
+        title: const Text('Practica 3'),
       ),
       drawer: const AppDrawer(),
       body: Padding(
