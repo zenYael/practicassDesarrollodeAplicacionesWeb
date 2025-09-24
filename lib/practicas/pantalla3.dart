@@ -1,15 +1,14 @@
-// registration_screen.dart
-
 import 'package:flutter/material.dart';
+import '../menu.dart';
 
-class RegistrationScreen extends StatefulWidget {
-  const RegistrationScreen({Key? key}) : super(key: key);
+class pantalla3 extends StatefulWidget {
+  const pantalla3({Key? key}) : super(key: key);
 
   @override
-  _RegistrationScreenState createState() => _RegistrationScreenState();
+  _pantalla3State createState() => _pantalla3State();
 }
 
-class _RegistrationScreenState extends State<RegistrationScreen> {
+class _pantalla3State extends State<pantalla3> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
@@ -75,6 +74,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       appBar: AppBar(
         title: const Text('Registro'),
       ),
+      drawer: const AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Form(

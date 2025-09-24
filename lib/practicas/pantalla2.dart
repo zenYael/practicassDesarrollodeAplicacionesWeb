@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../menu.dart';
 
 class pantalla2 extends StatefulWidget {
   const pantalla2({super.key});
@@ -20,6 +21,7 @@ class _pantalla2State extends State<pantalla2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Practica 3')),
+      drawer: const AppDrawer(),
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) => ListTile(

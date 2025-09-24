@@ -1,80 +1,59 @@
 import 'package:flutter/material.dart';
-import 'a.dart';
-import 'b.dart';
-import 'c.dart';
-import 'rps_game.dart';
+import 'menu.dart';
+import 'hub.dart';
+import 'practicas_index.dart';
+import 'ajustes.dart';
+import 'practicas/pantalla1.dart';
+import 'practicas/pantalla2.dart';
+import 'practicas/pantalla3.dart';
+import 'practicas/pantalla4.dart';
+import 'proyecto/notas.dart';
+import 'proyecto/imc.dart';
+import 'proyecto/galeria.dart';
+import 'proyecto/par_impar.dart';
 
+void main() {
+  runApp(const MyApp());
+}
 
-void main() => runApp(MaterialApp(
-  theme: ThemeData.dark(),
-  debugShowCheckedModeBanner: false,
-  home: const HomeScreen(),
-));
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode themeMode = ThemeMode.light;
+
+  void toggleTheme(bool isDark) {
+    setState(() {
+      themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Practica 4')),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text(
-                'Menú de navegación',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ListTile(
-              leading: const Icon(Icons.book),
-              title: const Text('Practica 2'),
-              onTap: () {
-                Navigator.pop(context); // Cierra el drawer
-                Navigator.push(context, MaterialPageRoute(builder: (_) => pantalla1()));
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.school),
-              title: const Text('Practica 3'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (_) => pantalla2()));
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.person_add),
-              title: const Text('Registro'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (_) => const RegistrationScreen()));
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.sports_esports),
-              title: const Text('Juego RPS'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (_) => const RpsGame()));
-              },
-            ),
-          ],
-        ),
-      ),
-      body: const Center(
-        child: Text(
-          'Bienvenido a mis Practicas :)',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+    return MaterialApp(
+      title: 'Portafolio',
+      debugShowCheckedModeBanner: false,
+      themeMode: themeMode,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      initialRoute: '/',
+      routes: {
+        '/': (_) => HubScreen(toggleTheme: toggleTheme, isDark: themeMode == ThemeMode.dark),
+        '/practicas': (_) => const PracticasIndex(),
+        '/ajustes': (_) => AjustesScreen(toggleTheme: toggleTheme, isDark: themeMode == ThemeMode.dark),
+        '/p1': (_) => const pantalla1(),
+        '/p2': (_) => const pantalla2(),
+        '/p3': (_) => const pantalla3(),
+        '/p4': (_) => const pantalla4(),
+        '/notas': (_) => const NotasScreen(),
+        '/imc': (_) => const ImcScreen(),
+        '/galeria': (_) => GaleriaScreen(),
+        '/parimpar': (_) => const ParImparScreen(),
+      },
     );
   }
 }

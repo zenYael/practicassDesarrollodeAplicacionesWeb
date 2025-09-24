@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../menu.dart'; // Importa el menú hamburguesa
 
 class pantalla1 extends StatefulWidget {
   const pantalla1({super.key});
@@ -20,6 +21,7 @@ class _pantalla1State extends State<pantalla1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Practica 2')),
+      drawer: const AppDrawer(), // ← Aquí integramos el menú
       body: Column(
         children: [
           ElevatedButton(

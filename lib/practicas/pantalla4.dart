@@ -1,14 +1,15 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import '../menu.dart';
 
-class RpsGame extends StatefulWidget {
-  const RpsGame({super.key});
+class pantalla4 extends StatefulWidget {
+  const pantalla4({super.key});
 
   @override
-  State<RpsGame> createState() => _RpsGameState();
+  State<pantalla4> createState() => _pantalla4State();
 }
 
-class _RpsGameState extends State<RpsGame> {
+class _pantalla4State extends State<pantalla4> {
   final List<String> choices = ['Piedra', 'Papel', 'Tijera'];
   String userChoice = '';
   String deviceChoice = '';
@@ -59,6 +60,7 @@ class _RpsGameState extends State<RpsGame> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Juego: Piedra, Papel o Tijera')),
+      drawer: const AppDrawer(),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
