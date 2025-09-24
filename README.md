@@ -1,6 +1,3 @@
-Aquí tienes un ejemplo de **README.md** en español para tu proyecto Flutter:
-
----
 
 #  Portafolio Flutter
 
