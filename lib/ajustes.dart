@@ -23,7 +23,7 @@ class AjustesScreen extends StatelessWidget {
             icon: Icon(Icons.info),
             applicationName: "Portafolio Flutter",
             applicationVersion: "1.0.0",
-            applicationLegalese: "Autor: Tu Nombre",
+            applicationLegalese: "Autor: Kevin Yael Cruz Vargas",
           ),
         ],
       ),
