@@ -5,10 +5,10 @@ class GaleriaScreen extends StatelessWidget {
   GaleriaScreen({super.key});
 
   final List<String> images = [
-    'assets/images/imagen1.jpg',
-    'assets/images/imagen2.jpg',
-    'assets/images/imagen3.jpg',
-    'assets/images/imagen4.jpg',
+    'images/imagen1.jpg',
+    'images/imagen2.jpg',
+    'images/imagen3.jpg',
+    'images/imagen4.jpg',
   ];
 
   @override
